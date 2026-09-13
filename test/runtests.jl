@@ -1,12 +1,12 @@
 using ColorTypes
 using FixedPointNumbers
-using PcxImages
+using PCXImages
 using Test
 
 const test_size = 100
 const n_iter = 10
 
-@testset "PcxImages" begin
+@testset "PCXImages" begin
     bitkeys = [(1, 1), (1, 2), (1, 3), (1, 4), (4, 4), (2, 1), (4, 1), (8, 1), (8, 3)]
 
     max_colors = Dict(

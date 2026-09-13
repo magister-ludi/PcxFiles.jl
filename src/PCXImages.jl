@@ -1,4 +1,4 @@
-module PcxImages
+module PCXImages
 
 using ColorTypes
 using FixedPointNumbers
@@ -80,4 +80,4 @@ include("decode.jl")
 include("encode.jl")
 include("dcx.jl")
 
-end # module PcxImages
+end # module PCXImages

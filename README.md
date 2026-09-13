@@ -1,6 +1,6 @@
-# PcxImages.jl
+# PCXImages.jl
 
-[![Build status](https://github.com/magister-ludi/PcxImages.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/JuliaIO/Netpbm.jl/actions/workflows/CI.yml)
+[![Build status](https://github.com/magister-ludi/PCXImages.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/JuliaIO/Netpbm.jl/actions/workflows/CI.yml)
 
 Read and write [PCX](https://en.wikipedia.org/wiki/PCX) formats in pure Julia.
 This package does not (yet) implement the
@@ -15,7 +15,7 @@ As [described by Adobe](https://www.adobe.com/creativecloud/file-types/image/ras
 
 PCX can store image data up to 32 bytes per pixel (red, green, blue, alpha with 1 byte each). Few software implementations are able to read/write all PCX files, because the specifications are incomplete, and because some files extend the specifications (which, for instance, do not include an alpha channel).
 
-PcxImages.jl will read and write PCX data with the following attributes:
+PCXImages.jl will read and write PCX data with the following attributes:
 
 | Bits per pixel  | Planes | Number of colours |
 | :---: | :---: | :---: |
@@ -29,13 +29,13 @@ PcxImages.jl will read and write PCX data with the following attributes:
 | 8  | 3  | 2<sup>24</sup> |
 | 8  | 4  | 2<sup>32</sup> |
 
-<sup>*</sup> Images with 4 bits per pixel plus 4 planes are rare (I have only discovered one in the wild). [Wikipedia](https://en.wikipedia.org/wiki/PCX#PCX_image_formats) says that the fourth plane represents an alpha-channel. ImageMagick and PcxImages.jl interpret the flags in a way that constructs a 16-colour image.
+<sup>*</sup> Images with 4 bits per pixel plus 4 planes are rare (I have only discovered one in the wild). [Wikipedia](https://en.wikipedia.org/wiki/PCX#PCX_image_formats) says that the fourth plane represents an alpha-channel. ImageMagick and PCXImages.jl interpret the flags in a way that constructs a 16-colour image.
 
 ## DCX format
 
 DCX data contain a concatenated set of PCX image data, plus a header to provide meta-information about the images in the set.
 
-## PcxImages.jl API
+## PCXImages.jl API
 
 The package exports four names. The signatures of the simplest invocations are:
 
